@@ -1,0 +1,13 @@
+﻿  Task_3.cpp
+C:\Users\User\OneDrive\Рабочий стол\visual\Algorlab4\Task_3\Task_3.cpp(32,15): error C2065: LC_NUMERIC: необъявленный идентификатор
+C:\Users\User\OneDrive\Рабочий стол\visual\Algorlab4\Task_3\Task_3.cpp(32,5): error C3861: setlocale: идентификатор не найден
+C:\Users\User\OneDrive\Рабочий стол\visual\Algorlab4\Task_3\Task_3.cpp(64,78): warning C4566: символ, представленный универсальным именем символа "\u221A", невозможно представить в текущей кодовой странице (1251)
+C:\Users\User\OneDrive\Рабочий стол\visual\Algorlab4\Task_3\Task_3.cpp(77,10): warning C4566: символ, представленный универсальным именем символа "\u221A", невозможно представить в текущей кодовой странице (1251)
+C:\Users\User\OneDrive\Рабочий стол\visual\Algorlab4\Task_3\Task_3.cpp(84,31): error C2440: инициализация: невозможно преобразовать "void *" в "StackElement *"
+  C:\Users\User\OneDrive\Рабочий стол\visual\Algorlab4\Task_3\Task_3.cpp(84,31):
+  Для преобразования "void*" к указателю на тип, не являющемуся "void", требуется явное приведение
+  
+C:\Users\User\OneDrive\Рабочий стол\visual\Algorlab4\Task_3\Task_3.cpp(105,18): error C2440: инициализация: невозможно преобразовать "void *" в "char *"
+  C:\Users\User\OneDrive\Рабочий стол\visual\Algorlab4\Task_3\Task_3.cpp(105,18):
+  Для преобразования "void*" к указателю на тип, не являющемуся "void", требуется явное приведение
+  
