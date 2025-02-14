@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
 
@@ -24,8 +24,7 @@ void addNode(Node** head, int data) {
     Node* newNode = createNode(data);
     if (*head == NULL) {
         *head = newNode;
-    }
-    else {
+    } else {
         Node* temp = *head;
         while (temp->next != NULL) {
             temp = temp->next;
@@ -60,8 +59,7 @@ void deleteNode(Node** head, int key) {
     }
     if (temp->prev == NULL) {
         *head = temp->next;
-    }
-    else {
+    } else {
         temp->prev->next = temp->next;
     }
     if (temp->next != NULL) {
@@ -79,40 +77,56 @@ void destroyList(Node** head) {
         current = next;
     }
     *head = NULL;
+    printf("Список знищено.\n");
+}
+
+int getInput(const char* prompt) {
+    int data;
+    printf("%s", prompt);
+    scanf_s("%d", &data);
+    return data;
+}
+
+void addNodeMenu(Node** head) {
+    int data = getInput("Введіть дані для додавання: ");
+    addNode(head, data);
+}
+
+void deleteNodeMenu(Node** head) {
+    int data = getInput("Введіть дані для видалення: ");
+    deleteNode(head, data);
+}
+
+void menu() {
+    printf("\n1. Додати елемент\n");
+    printf("2. Видалити елемент\n");
+    printf("3. Вивести список\n");
+    printf("4. Знищити список\n");
+    printf("5. Вийти\n");
+    printf("Виберіть дію: ");
 }
 
 int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     Node* head = NULL;
-    int choice, data;
+    int choice;
 
     do {
-        printf("\n1. Додати елемент\n");
-        printf("2. Видалити елемент\n");
-        printf("3. Вивести список\n");
-        printf("4. Знищити список\n");
-        printf("5. Вийти\n");
-        printf("Виберіть дію: ");
+        menu();
         scanf_s("%d", &choice);
-
         switch (choice) {
         case 1:
-            printf("Введіть дані для додавання: ");
-            scanf_s("%d", &data);
-            addNode(&head, data);
+            addNodeMenu(&head);
             break;
         case 2:
-            printf("Введіть дані для видалення: ");
-            scanf_s("%d", &data);
-            deleteNode(&head, data);
+            deleteNodeMenu(&head);
             break;
         case 3:
             displayList(head);
             break;
         case 4:
             destroyList(&head);
-            printf("Список знищено.\n");
             break;
         case 5:
             printf("Вихід з програми.\n");
